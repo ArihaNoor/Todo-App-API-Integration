@@ -1,0 +1,36 @@
+#header{
+    background-color:#1a3242;
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+    width: 50%;
+}
+
+.logo h1{
+    margin-left: 3rem;
+} 
+
+.logout{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.logout-btn{
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    background-color: #93c0e8;
+    margin-left: 0.5rem;
+}
+.logout-link{
+    color: white;
+    text-decoration: none;
+}

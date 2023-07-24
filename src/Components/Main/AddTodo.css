@@ -1,0 +1,51 @@
+#Modal{
+    z-index: 1;
+    display: none;
+}
+#addTodo{
+    width: 50%;
+    height: min-content;
+    background-color: #b7dbf3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    align-items: center;
+    padding: 1rem;
+    font-weight: bolder;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    border-radius: 4rem;
+    box-shadow: 5px 5px 10px #1a3242;
+    
+}
+
+.add-input{
+    border: none;
+    height: 3rem;
+    width: 60%;
+}
+
+textarea{
+    border: none;
+    height: 5rem;
+    width: 60%;
+}
+
+.addbutton{
+    background-color: #1a3242;
+    color: white;
+    padding: 1rem;
+    font-size: 15px;
+    border: none;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+
+.add-links{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
