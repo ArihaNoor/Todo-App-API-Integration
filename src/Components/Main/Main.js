@@ -57,7 +57,7 @@ const Main = () => {
 
   useEffect(() => {
     fetchTasks(); 
-  });
+  },[]);
 
   const HandleAddTask = () => {
     setIsLoading(true); 
@@ -89,6 +89,7 @@ const Main = () => {
         }
       })
       .catch((error) => {
+        console.log(error,"this is error message");
         setIsLoading(false); 
         showErrorToastMessage("Error : " + error.message)
       });

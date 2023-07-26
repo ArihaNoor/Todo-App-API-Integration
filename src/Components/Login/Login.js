@@ -19,7 +19,7 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    setisLoading(true); 
+    setisLoading(true);
     if (!userEmail || !password) {
       showErrorToastMessage("Input Fields are required");
     } else {
@@ -53,7 +53,7 @@ const Login = () => {
           showErrorToastMessage(error);
         })
         .finally(() => {
-          setisLoading(false); 
+          setisLoading(false);
         });
     }
   };
@@ -83,13 +83,14 @@ const Login = () => {
         />
         <span className="span">*</span>
         <br></br>
-        {isLoading ? ( 
-          <Loader />
-        ) : (
-          <button className="btn-login" onClick={handleLogin}>
-            Login
-          </button>
-        )}
+        <button class="buttonload btn-login" onClick={handleLogin}>
+          {isLoading === true ? (
+            <i class="fa fa fa-spinner fa-spin"></i>
+          ) : (
+            <i class=""></i>
+          )}
+          Login
+        </button>
         <br></br>
         <Link to="/register" className="link">
           <p>Don't Have an Account?</p>

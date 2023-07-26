@@ -5,7 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BASE_URL } from "../../BaseURL/BaseURL";
 import { useNavigate } from "react-router-dom";
-import Loader from '../Loader/Loader'
+import Loader from "../Loader/Loader";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -49,16 +49,14 @@ const Register = () => {
       fetch(`${BASE_URL}/register`, requestOptions)
         .then((response) => response.json())
         .then((result) => {
-          if(result.success===true){
+          if (result.success === true) {
             showSuccessToastMessage("Successfully registered");
             setIsLoading(false);
             navigate("/login");
-          }else{
-            <Loader />
           }
         })
         .catch((error) => {
-          showErrorToastMessage(error);
+          showErrorToastMessage(error.message);
         });
     }
   };
@@ -67,7 +65,7 @@ const Register = () => {
     <div id="register-page">
       <ToastContainer />
       <div className="register-left">
-      <i class="fa fa-solid fa-user-plus register-icon"></i>
+        <i class="fa fa-solid fa-user-plus register-icon"></i>
         <h1>Create Account</h1>
         <p>Create Your New Account...</p>
         <input
@@ -103,11 +101,12 @@ const Register = () => {
           <p></p>
         )}
         <br></br>
-        <Link to="/">
-          <button className="btn-register" onClick={handleRegister}>
-            Register
-          </button>
-        </Link>
+        <button class="buttonload btn-register" onClick={handleRegister}>
+          {
+            isLoading === true ? <i class="fa fa fa-spinner fa-spin"></i> : <i class=""></i>
+          }
+          Register
+        </button>
         <Link to="/login" className="link">
           <p>Already Have an Account?</p>
         </Link>

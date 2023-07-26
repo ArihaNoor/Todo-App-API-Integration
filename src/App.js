@@ -8,6 +8,7 @@ import FirstScreen from "./Components/FirstScreen/FirstScreen";
 function App() {
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+  console.log(token,"this is token")
 
   return (
     <Routes>
